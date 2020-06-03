@@ -7,8 +7,8 @@ jobs:
     steps:
       - checkout
       - node/install-packages
-      - run:
-         command: cd /home/circleci/project $$ npm init && npm test
+      - run: npm install
+      - run: npm test
 workflows:
   build-test:
     jobs:
